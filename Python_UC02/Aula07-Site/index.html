@@ -1,0 +1,796 @@
+
+
+    <!-- Bootstrap JS e dependências -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura HTML5 com Bootstrap</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!-- Estilos personalizados (opcional) -->
+    <style>
+        body {
+           
+            background-color: #373738;
+        }
+            
+        .main{
+            max-width: 100%;
+            
+         }  
+           
+        
+        header {
+            margin-bottom: 80px;
+            max-width: 100%;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            background-color: #040405;
+            display:grid;
+            align-items: center;
+            
+        
+        }
+
+    
+
+        .bi {
+            color: aliceblue;
+            font-size: 24px;
+        }
+        
+        
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        button {
+            border-radius: 10%;
+        }
+        
+        img{
+           border-radius: 10%; 
+           
+        }
+
+        .form-check-label{
+            color: aliceblue;
+        }
+        .form-label{
+            color: aliceblue;
+        }
+        .td-rowspan{
+            color: aliceblue;
+        }
+
+        th, td{
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <!-- Container -->  
+       <div class="container-fluid">
+      <!-- Logo -->
+         <a class="navbar-brand" href="#">Minha Marca</a>
+    
+     <!-- Botão -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      <!-- Conteúdo  -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                 <a class="nav-link" href="index.html"><i class="bi bi-house-fill"></i>Início</a>
+                </li>
+                <li class="nav-item">
+                 <a class="nav-link" href="sobre.html"><i class="bi bi-person-raised-hand"></i>Sobre</a>
+                </li>
+                <li class="nav-item">
+                 <a class="nav-link" href="sobre.html">Preço</a>
+                </li>
+                <li class="nav-item">
+                 <a class="nav-link" href="sobre.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                 <a class="nav-link" href="sobre.html"><i class="bi bi-person-circle"></i>Perfil</a>
+                </li>
+            </ul>
+        </div>
+            <!-- Conteúdo  -->
+    
+        </div>
+            <!-- Container --> 
+   </nav>
+
+    <!-- Cabeçalho -->
+    
+   
+    <main class="container mt-5 ">
+
+        <!-- 1a Linha -->
+        <div class="row border mt-5">
+
+            <!-- 1a Coluna -->
+            <div class="col-4">
+
+                <div class="card">
+                    <img src="https://placehold.co/152x200" class="m-2" width="152"height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">BLoodborne</h5> 
+                        <p class="card-text">
+                            Descrição ou conteúdo resumido.
+                        </p>
+                        <a href="http://www.google.com.br"
+                            target="blank"
+                            class="btn btn-primary">Ação e Aventura</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 1a Coluna -->
+
+            <!-- 2a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" height="200px" width="152px">
+                    <div class="card-body">
+                        <h5 class="card-title">Call of Duty</h5> 
+                        <p class="card-text">
+                            Descrição ou conteúdo resumido.
+                        </p>
+                        <a href="http://www.google.com.br"
+                            target="blank"
+                            class="btn btn-primary">Ação e Aventura</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 2a Coluna -->
+
+            <!-- 3a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" height="200px" width="152px">
+                    <div class="card-body">
+                        <h5 class="card-title">Spider Man</h5> 
+                        <p class="card-text">Descrição ou conteúdo resumido.</p>
+                        <a href="http://www.google.com.br"
+                        target="blank"
+                        class="btn btn-primary">Ação e Rpg</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 3a Coluna -->
+
+        </div>
+        <!-- 1a Linha -->
+
+        <!-- 2a Linha -->
+        <div class="row border mt-5">
+
+            <!-- 1a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" width="152"height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">The Last Of Us 2</h5> 
+                        <p class="card-text">Descrição ou conteúdo resumido.</p>
+                        <a href="http://www.google.com.br"
+                        target="blank"
+                        class="btn btn-primary">Ação e Rpg</a>
+                    </div>
+                </div>   
+            </div>
+
+            
+            <!-- 1a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" width="152"height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">The Division</h5> 
+                        <p class="card-text">Descrição ou conteúdo resumido.</p>
+                        <a href="http://www.google.com.br"
+                        target="blank"
+                        class="btn btn-primary">Ação e Rpg</a>
+                    </div>
+                </div> 
+            </div> 
+       
+
+            <!-- 2a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" width="152"height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">Fallout 4</h5> 
+                        <p class="card-text">Descrição ou conteúdo resumido.</p>
+                        <a href="http://www.google.com.br"
+                        target="blank"
+                        class="btn btn-primary">Ação e Rpg</a>
+                    </div>
+                </div> 
+            </div>
+            <!-- 2a Coluna -->
+        </div>
+        <!-- 3a Coluna -->
+         <div class="row border mt-5">
+
+            <!-- 1a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" width="152"height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">The Whitcher 3</h5> 
+                        <p class="card-text">Descrição ou conteúdo resumido.</p>
+                        <a href="http://www.google.com.br"
+                        target="blank"
+                        class="btn btn-primary">Ação e Rpg</a>
+                    </div>
+                </div>   
+            </div>
+
+            
+            <!-- 1a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" width="152"height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">Dark Sous</h5> 
+                        <p class="card-text">Descrição ou conteúdo resumido.</p>
+                        <a href="http://www.google.com.br"
+                        target="blank"
+                        class="btn btn-primary">Ação e Rpg</a>
+                    </div>
+                </div> 
+            </div> 
+       
+
+            <!-- 2a Coluna -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="https://placehold.co/152x200"  class="m-2" width="152"height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">Elden Ring</h5> 
+                        <p class="card-text">Descrição ou conteúdo resumido.</p>
+                        <a href="http://www.google.com.br"
+                        target="blank"
+                        class="btn btn-primary">Ação e Rpg</a>
+                    </div>
+                </div> 
+            </div>
+            <!-- 2a Coluna -->
+        </div>
+        
+            
+            <!-- 3a Coluna -->
+
+        </div>
+        <!-- 2a Linha -->
+
+        
+         
+    </main>  
+    
+        <!-- Conteúdo principal -->
+    <main class="container">
+       
+        <table>
+                <!-- Head da Tabela -->   
+            <thead>
+                <h1 style="color: aliceblue;">Preço</h1>  <!-- Linha -->       
+                <tr>
+                    <th>Foto</th>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+                <!-- Corpo da tabela --> 
+            <tbody>  
+                  <!-- Linha -->
+         
+                <tr>
+                    <td><img src="img/eldenringerscheint_3492503.jpg"width="160px"height="160px"></td>
+                     <td rowspan="1">Elden Ring<p>RPG e Ação<p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                     <td>R$ 199,00</td>
+
+                     
+    
+                    <tr>
+                        <td><img src="img/spider man.jpeg"width="160px"height="160px"></td>
+                        <td rowspan="1">Spider Man<p>Ação e Aventura</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td> R$ 119,00</td>
+                    </tr>
+    
+                    <tr>
+                        <td><img src="img/the last.jpeg"width="160px"height="160px"></td>
+                        <td rowspan="1">The Last Of Us 2<p>Ação e Aventura</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td> R$ 349,00</td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="img/the division.jpeg"width="160px"height="160px"></td>
+                        <td rowspan="1">The Division<p>Ação e RPG</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td>R$ 79,00</td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="img/call.jpeg"width="160px"height="160px"></td>
+                        <td rowspan="1">Call Of Duty<p>Ação</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td>R$ 199,00</td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="img/fallout-4-computer-k6f80brazoits9qi.jpg"width="160px"height="160px"></td>
+                        <td rowspan="1">Fallout 4<p>RPG e Ação</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td> R$ 192,00</td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="img/blood.jpeg"width="160px"height="160px"></td>
+                        <td rowspan="1">BLoodborne<p>RPG e Ação</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td> R$ 188,00</td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="img/the whi.jpeg"width="160px"height="160px"></td>
+                        <td rowspan="1">The Whitcher 3<p>RPG Ação e Aventura</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td>R$ 327,00</td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="img/dark.jpeg"width="160px"height="160px"></td>
+                        <td rowspan="1">Dark Souls<p>RPG e Ação</p><button type="button" class="btn btn-success">Disponível</button></p></td>
+                        <td>R$ 269,00</td>
+                    </tr>
+        
+                    
+                </tr>
+            </tbody>
+        </table>
+            
+            <header class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 style="color: aliceblue;">Formulário de Cadastro</h1>
+                </div>
+            </header>
+        
+            <!-- Conteúdo principal -->
+            <main class="container">
+                <section id="section2" class="mb-5">
+                  <form>
+                     <div class="mb-3">
+        
+                      <label for="nome" class="form-label">Nome:</label>
+                      <input type="text" class="form-control"
+                               id="nome"
+                               nome="nome"
+                               requered
+                               placeholder="Digite seu nome completo">
+                 
+                    </div>
+        
+        
+                               
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email"  class="form-control"
+                                 id="email"
+                                 nome="email"
+                                 requered
+                                 placeholder="Digite seu e-mail">
+        
+                    </div>
+                                
+                                
+        
+                    <div class="mb-3">
+                         <label for="telefone" class="form-label">Telefone:</label>
+                         <input type="tel" class="form-control" class="btn btn-secondary"
+                                  id="telefone"
+                                  nome="telefone"
+                                  reuqered
+                                  placeholder="(xx) xxxxx-xxxx">
+        
+                    </div>   
+        
+                    <div class="row">
+                        
+                        <div class="mb-3 col-5">
+                            <label for="endereço" class="form-label">Endereço:</label>
+                            <input type="tel" class="form-control" class="btn btn-secondary"
+                                    id="endereço"
+                                    nome="endereço"
+                                    reuqered
+                                    placeholder="">
+        
+                        </div>
+        
+                        
+                        
+                        <div class="mb-3 col-5">
+                            <label for="rua" class="form-label">Rua:</label>
+                            <input type="tel" class="form-control" class="btn btn-secondary"
+                                    id="Rua"
+                                    nome="Rua"
+                                    reuqered
+                                    placeholder="">
+        
+                        </div>
+        
+                        <div class="mb-3 col-2">
+                            <label for="Bairro" class="form-label">Bairro:</label>
+                            <input type="tel" class="form-control" class="btn btn-secondary"
+                                    id="Bairro"
+                                    nome="Bairro"
+                                    reuqered
+                                    placeholder="">
+            
+                        </div>
+        
+                    </div>
+        
+                    
+        
+                    <div class="row">
+                        <div class="mb-3 col-4">
+                            <label for="Cidade" class="form-label">Cidade:</label>
+                            <input type="tel" class="form-control" class="btn btn-secondary"
+                                    id="Cidade"
+                                    nome="Cidade"
+                                    reuqered
+                                    placeholder="">
+        
+                        </div>
+        
+        
+                        <div class="mb-3 col-4">
+                                <label for="estado" class="form-label">Estado:</label>
+                                
+                                <select class="form-select" id="estado" name="estado" required>
+                                    <option value="">Selecione...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="GO">Goiânia</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantis</option>
+                                    </select>
+                                    <class="form-control" class="btn btn-secondary"
+                                            id="Estado"
+                                            nome="Estado"
+                                            reuqered
+                                            placeholder="">
+            
+                            </div>
+            
+            
+                            <div class="mb-3 col-4">
+                                    <label for="comp" class="form-label">Comp:</label>
+                                    <input type="tel" class="form-control" class="btn btn-secondary"
+                                            id="comp"
+                                            nome="comp"
+                                            reuqered
+                                            placeholder="">
+            
+                            </div>
+                        </div>
+            
+            
+            
+            
+                    <div class="mb-3">
+                        <label for="cpf" class="form-label">CPF:</label>
+                        <input type="cpf" class="form-control" class="btn btn-secondary"
+                                id="cpf"
+                                nome="cpf"
+                                reuqered
+                                placeholder="ex:xxx.xxx.xx-xx">
+            
+                    </div>
+            
+            
+            
+                    <div class="row">
+            
+                            <div class="mb-3 col-6">
+                            <label for="senha" class="form-label">Senha:</label>
+                            <input type="tel" class="form-control" class="btn btn-secondary"
+                                        id="senha"
+                                        nome="senha"
+                                        reuqered
+                                        placeholder="Digite uma senha com até 6 digitos">
+            
+                            </div>
+            
+            
+                            <div class="mb-3 col-6">
+                                <label for="conf.senha" class="form-label">Conf. Senha:</label>
+                                <input type="tel" class="form-control" class="btn btn-secondary"
+                                        id="endereço"
+                                        nome="endereço"
+                                        reuqered
+                                        placeholder="Confirmação de senha">
+            
+                            </div>
+                    </div>
+            
+            
+            
+                    <div class="mb-3">
+                        <label for="Data Nasc" class="form-label">Data Nasc:</label>
+                        <input type="tel" class="form-control" class="btn btn-secondary"
+                                id="endereço"
+                                nome="endereço"
+                                reuqered
+                                placeholder="xx/xx/xxxx">
+            
+                    </div>
+            
+            
+                    <div class="mb-3">
+                        <label for="login" class="form-label">Login:</label>
+                        <input type="tel" class="form-control" class="btn btn-secondary"
+                                id="endereço"
+                                nome="endereço"
+                                reuqered
+                                placeholder="Digie seu login">
+            
+                    </div>
+                    
+            
+                            <button type="success" class="btn btn-success">Cadastrar</button>
+                            <button type="danger" class="btn btn-danger">Limpar</button>
+                            
+                            
+                    </form>
+                    </section>
+                </main>
+
+            <main class="container">
+                <form id="form-cadastro" class="needs-validation">
+                <div>
+                        <div class="col-12">
+                        <label for="estado"class="form-label">Selecione um Estado:</label>
+                        <select class="form-select" id="estado" name="estado" required>
+                            <option value="">Selecione...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="GO">Goiânia</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantis</option>
+                    </select>
+               </div>
+    
+    
+    
+               <div class="col-12">
+                    <label style="color: azure;">Gênero:</label>
+    
+                        <div claas="form-check">
+    
+                            <input class="form-check-input" type="radio" id="masculino" name="genero" value="M" checked>
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                    </label> 
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="feminino" name="genero" value="F">
+                        <label class="form-check-label" for="feminino">Feminino</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="n_binario" name="genero" value="F">
+                        <label class="form-check-label" for="n_binario">Não binário</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="n_informado" name="genero" value="F">
+                        <label class="form-check-label" for= "n_informado">Prefiro não informar</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="outro" name="genero" value="F">
+                        <label class="form-check-label" for="outro">Outro</label>
+                    </div>
+    
+               </div>
+    
+    
+    
+                <div class="col-12">
+                    <label class="form-label"> Selecione seus interesses:</label>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="esportes" name="interesses[]" value="esportes">
+                        <label class="form-check-label" for="esportes">Esportes</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="musica" name="interesses[]" value="musica">
+                        <label class="form-check-label" for="musica">Música</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Tecnologia" name="interesses[]" value="Tecnologia">
+                        <label class="form-check-label" for="Tecnologia">Tecnologia</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Cinema" name="interesses[]" value="Cinema">
+                        <label class="form-check-label" for="Cinema">Cinema</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Livros" name="interesses[]" value="Livros">
+                        <label class="form-check-label" for="Livros">Livros</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Viagens" name="interesses[]" value="Viagens">
+                        <label class="form-check-label" for="Viagens">Viagens</label>
+                    
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" class="form-check-input" type="checkbox" id="Gastronomia" name="interesses[]" value="Gastronomia">
+                        <label class="form-check-label" for="Gastronomia">Gastronomia</label>
+    
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Jogos" name="interesses[]" value="Jogos">
+                        <label class="form-check-label" for="Jogos">Jogos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Moda" name="interesses[]" value="Moda">
+                        <label class="form-check-label" for="Moda">Moda</label>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="Arte" name="interesses[]" value="Arte">
+                        <label class="form-check-label" for="Arte">Arte</label>
+                    </div>
+    
+                </div>
+    
+                <div class="col-12">
+                    <label for="cor-favorita" class="form-label">Escolha a cor do seu perfil:</label>
+                    <input type="color" class="form-control form-control-color" id="cor-favorita" name="cor_favorita" value="#ff0000">
+                </div>
+    
+    
+                <div class="col-12">
+                    <h4 style="color: aliceblue;">Foto de Perfil</h4>
+                    <input type="file" class="form-control" id="foto" name="foto" accept="image/*">
+    
+                    <p class="text-muted"></p>
+                          
+                </div>
+    
+    
+                <div class="container mt-5">
+                    <label for="mensagem" class="form-label">Sobre você (breve descrição):</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" maxlength="160"
+                            placeholder="Fale um pouco sobre você... Ex: Entusiasta de tecnologia, apaixonado por música e viagens"></textarea>
+                    <div class="form-text text-end mt-1" id="contadorCaracteres">0/160</div>
+                       
+                 </div>
+    
+            </form>
+
+            
+            <main style="color: aliceblue;">
+                <h2 style="color: aliceblue;">Sobre Nós</h2>
+                <p>
+                    Somos uma loja dedicada a oferecer os melhores jogos online para gamers de todos os níveis. Nossa missão é proporcionar uma experiência de compra segura, rápida e divertida, com uma vasta seleção de jogos para PC, consoles e dispositivos móveis.
+                </p>
+                <p>
+                    Com uma equipe apaixonada por jogos, estamos sempre atualizando nosso catálogo com as novidades do mercado, garantindo que você tenha acesso às últimas tendências e lançamentos.
+                </p>
+                <p>
+                    Nosso compromisso é com a satisfação do cliente, oferecendo suporte dedicado e um ambiente confiável para você aproveitar ao máximo seu universo gamer.
+                </p>
+            </main>
+        </main>
+    </main>
+
+    <!--Rodapé -->
+    <footer id="footer">
+        <div class="row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <h3 style="color: aliceblue;">Links Rápidos</h3>
+                <p style="color: aliceblue;">Sobre Nós</p>
+                <p style="color: aliceblue;">Faq</p>
+                <p style="color: aliceblue;">Ajuda</p>
+                <p style="color: aliceblue;">Meu Acesso</p>
+                <p style="color: aliceblue;">Blog</p>
+                <p style="color: aliceblue;">Contato</p>
+            </div>
+
+            <div class="col-3">
+                <h3 style="color: aliceblue;">Contatos</h3>
+                <p style="color: aliceblue;"><i class="bi bi-headset"></i> +55 (24) 9 9996-5034</p>
+                <p style="color: aliceblue;"><i class="bi bi-envelope-fill"></i></p>
+                <p style="color: aliceblue;">lbbbernardes@gmail.com</p>
+            </div>
+
+            <div class="col-3">
+
+            </div>
+        </div>
+
+        <p class="text-muted">&copy; Larissa Bernardes</p>
+    </footer>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

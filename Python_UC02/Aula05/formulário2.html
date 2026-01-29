@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura HTML5 com Bootstrap</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados (opcional) -->
+    <style>
+        body {
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 5px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-primary">Formulário</h1>
+        
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        
+
+        <section id="section2" class="mb-5">
+            <h2 class="text-info">Formulário Simples</h2>
+
+          <form
+              action="/cadastro"
+              mathod="Post"
+              target="_black">
+
+              <label for="nome">Nome:</label>
+              <input type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                        placeholder="Seu nome completo">
+
+                <label for="email"> E-mail:</label>
+                <input type="email"
+                         id="email"
+                         nome="email"
+                         requered
+                         placeholder="exemplo@email.com">
+
+                 <label for="telefone">Telefone:</label>
+                 <input type="tel"
+                          id="telefone"
+                          nome="telefone"
+                         pattern="[0-9]{11}"
+                         title="DDD + Número (apenas dígitos)">
+
+                <label for="senha">Senha:</label>
+                <input type="password"
+                         id="senha"
+                         nome="senha"
+                         requered
+                         minlength="6">
+
+                <button type="submit">Cadastrar</button>
+                <button type="reset">Limpar</button>
+                
+                
+        </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="footer" class="container text-center">
+        <p class="text-muted">&copy;Larissa Bernardes</p>
+    </footer>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
