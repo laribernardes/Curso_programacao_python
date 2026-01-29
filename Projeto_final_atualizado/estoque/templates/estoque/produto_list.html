@@ -1,0 +1,161 @@
+{% extends 'estoque/base.html' %}
+
+{% block title %}Estoque - Loja de Eletrônicos{% endblock %}
+{% block custom_css %}
+<style>
+/* Fundo do corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Gradiente: azul + rosa predominante, laranja apenas sutil */
+    
+    min-height: 100vh;
+    color: #000; /* texto padrão preto */
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffb347, #f107a3); /* azul → rosa do slogan */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Botão adicionar produto */
+.btn-success {
+    background: linear-gradient(90deg, #7b2ff7, #f107a3); /* azul → rosa */
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 10px 25px;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(123, 47, 247, 0.5);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 25px rgba(241, 7, 163, 0.7);
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.85); /* fundo translúcido */
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000; /* texto dos produtos em preto */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Imagem do produto */
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Nome e preço do produto */
+.card-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #000; /* preto */
+}
+
+.card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333; /* categoria/preço preto */
+    margin-bottom: 5px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Botões */
+.btn-sm {
+    border-radius: 25px;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    padding: 6px 12px;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #5d24f9, #f107a3);
+}
+
+.btn-warning {
+    background: linear-gradient(90deg, #ff8c00, #f107a3); /* laranja + rosa */
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #f107a3, #ff1744);
+}
+
+.btn-primary:hover, .btn-warning:hover, .btn-danger:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(123, 47, 247, 0.3);
+}
+
+/* Texto "Nenhum produto" */
+.text-center {
+    color: #000;
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-top: 50px;
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+    <h1>Nossos Produtos</h1>
+    <a href="{% url 'estoque:produto_create' %}" class="btn btn-success mt-2 mt-md-0">Adicionar Novo Produto</a>
+</div>
+
+<div class="row">
+    {% for produto in produtos %}
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+            {% if produto.imagem %}
+            <img src="{{ produto.imagem.url }}" class="card-img-top" alt="{{ produto.nome }}">
+            {% else %}
+            <img src="https://placehold.co/300x200.png?text=Sem+Imagem" class="card-img-top" alt="Sem Imagem">
+            {% endif %}
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ produto.nome }}</h5>
+                <p class="card-subtitle mb-1">{{ produto.categoria.identificacao|default:"Sem Categoria" }}</p>
+                <h6 class="card-subtitle mb-3">{{ produto.preco|default:"Preço não informado" }}</h6>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                    <a href="{% url 'estoque:produto_detail' produto.pk %}" class="btn btn-primary btn-sm">Detalhes</a>
+                    <a href="{% url 'estoque:produto_update' produto.pk %}" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{% url 'estoque:produto_delete' produto.pk %}" class="btn btn-danger btn-sm">Deletar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col">
+        <p class="text-center">Nenhum produto cadastrado ainda.</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
